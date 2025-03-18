@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DempApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+11612ac9ebadb8ab5fb21fb68ee2ecf038a5a2ef")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6794b2f5b97375cd5f91b1e6ef677df1ab01f476")]
 [assembly: System.Reflection.AssemblyProductAttribute("DempApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DempApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

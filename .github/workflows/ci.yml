@@ -11,7 +11,7 @@ jobs:
       - name: Set Up .NET
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: '6.0.x'
+          dotnet-version: '9.0.x'
 
       - name: Restore Dependencies
         run: dotnet restore backend/DemoApi
@@ -20,4 +20,10 @@ jobs:
         run: dotnet build backend/DemoApi --configuration Release
 
       - name: Run Tests
-        run: dotnet test backend/DemoApi
+        run: dotnet test backend/DemoApi --logger "trx;LogFileName=test-results.trx"
+
+      - name: Upload Test Results
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-results
+          path: backend/DemoApi/TestResults/test-results.trx

@@ -16,8 +16,14 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
+      - name: Set Up Terraform
+        uses: hashicorp/setup-terraform@v2
+        with:
+          terraform_version: 1.7.0
+
       - name: Deploy with Terraform
         run: |
           cd terraform
           terraform init
+          terraform workspace select default || terraform workspace new default
           terraform apply --auto-approve
